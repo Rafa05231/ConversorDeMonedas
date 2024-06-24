@@ -26,7 +26,8 @@ public class Main {
             System.out.println("5) Dolar => Peso colombiano");
             System.out.println("6) Peso colombiano => Dolar");
             System.out.println("7) Salir\n");
-            System.out.println("*********************************************************************************");
+            System.out.println("*********************************************************************************\n");
+            System.out.println("Elige la opcion que deseas: ");
             opcion = lectura.nextInt();
 
             switch (opcion){
