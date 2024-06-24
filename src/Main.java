@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +8,8 @@ public class Main {
 
         Scanner lectura = new Scanner(System.in);
         ConsultarMoneda consultarMoneda = new ConsultarMoneda();
+        GeneradorArchivo generadorArchivo = new GeneradorArchivo();
+        List<Moneda> listaConversionMonedas = new ArrayList<>();
         int opcion=0;
         double cantidadConversion;
         String monedaBase;
@@ -35,6 +40,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -51,6 +57,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -67,6 +74,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -83,6 +91,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -99,6 +108,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -115,6 +125,7 @@ public class Main {
                         moneda = consultarMoneda.convertirMoneda(monedaBase,monedaConvertida,cantidadConversion);
                         System.out.println("El valor de "+cantidadConversion+" "+moneda.base_code()+" equivalen a "
                                 + moneda.conversion_result()+" "+ moneda.target_code());
+                        listaConversionMonedas.add(moneda);
                     }catch (RuntimeException e){
                         System.out.println(e.getMessage());
                         System.out.println("Finalizando programa!");
@@ -123,6 +134,12 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Gracias por usar nuestro sistema de conversion de monedas. Hasta pronto");
+                    try{
+                        generadorArchivo.GenerarJson(listaConversionMonedas);
+                    }catch (RuntimeException e){
+                        System.out.println(e.getMessage());
+                    }
+
                     break;
                 default:
                     System.out.println("Ingresa una opcion valida. Entre 1 y 7");

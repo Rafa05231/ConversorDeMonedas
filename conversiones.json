@@ -1,0 +1,44 @@
+[
+  {
+    "result": "success",
+    "base_code": "USD",
+    "target_code": "ARS",
+    "conversion_rate": 906.0,
+    "conversion_result": 4530000.0
+  },
+  {
+    "result": "success",
+    "base_code": "ARS",
+    "target_code": "USD",
+    "conversion_rate": 0.001104,
+    "conversion_result": 33.12
+  },
+  {
+    "result": "success",
+    "base_code": "KRW",
+    "target_code": "COP",
+    "conversion_rate": 2.9939,
+    "conversion_result": 149695.0
+  },
+  {
+    "result": "success",
+    "base_code": "COP",
+    "target_code": "KRW",
+    "conversion_rate": 0.334,
+    "conversion_result": 10020.0
+  },
+  {
+    "result": "success",
+    "base_code": "USD",
+    "target_code": "COP",
+    "conversion_rate": 4156.4102,
+    "conversion_result": 8312820.4
+  },
+  {
+    "result": "success",
+    "base_code": "COP",
+    "target_code": "USD",
+    "conversion_rate": 2.4059E-4,
+    "conversion_result": 12.0295
+  }
+]
